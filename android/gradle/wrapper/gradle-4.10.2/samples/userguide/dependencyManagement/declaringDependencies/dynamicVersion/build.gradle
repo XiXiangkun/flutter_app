@@ -1,0 +1,16 @@
+// tag::dependencies[]
+apply plugin: 'java-library'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework:spring-web:5.+'
+}
+// end::dependencies[]
+
+task copyLibs(type: Copy) {
+    from configurations.compileClasspath
+    into "$buildDir/libs"
+}
