@@ -1,9 +1,12 @@
 # flutter_app
 
-A new Flutter application.
+A new Flutter application.（Android Studio创建）
 
 ## Getting Started
 
+项目代码在lib文件中
+
+AS自动添加的描述：
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
