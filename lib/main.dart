@@ -4,6 +4,10 @@ import 'demo/listview_demo.dart';
 //引入底部导航栏的小部件
 import 'demo/bottom_navigation_bar_demo.dart';
 import 'demo/basic_demo.dart';
+//路由相关配置使用的小部件
+import 'demo/navigator_demo.dart';
+//form表单提交的部件
+import 'demo/form_demo.dart';
 
 void main(){
   runApp(App());
@@ -16,7 +20,16 @@ class App extends StatelessWidget{
     //MaterialApp风格应用设置
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      //如果不用home，要设置初始路由
+      //home: NavigatorDemo(),
+      //设置路由和初始路由
+      initialRoute: '/',
+      routes: {
+        //之前报错是因为路由没加/
+        '/':(context) => NavigatorDemo(),
+        '/about':(context) => Page(title: 'About'),
+        '/form':(context) => FormDemo(),
+      },
       //主题颜色
       theme: ThemeData(
         primarySwatch: Colors.teal,
@@ -139,6 +152,3 @@ class Home extends StatelessWidget{
     );
   }
 }
-
-
-

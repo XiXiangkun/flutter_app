@@ -101,20 +101,25 @@ class TextDemo extends StatelessWidget{
   //下划线表示变量是私有的
   final TextStyle _textStyle = TextStyle(
     fontSize: 16.0,
+    color: Colors.black45,
   );
   //使用$引用变量
-  final String _author = 'XXK';
+  final String _time = '2019-6-2';
+  final String _author = 'xiangkun';
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Text(
-      '$_author:练习文字与文字样式，行内多样式文字，容器，装饰盒子，边框，圆角，阴影，形状，渐变，背景图像。。。练习文字与文字样式，行内多样式文字，容器，装饰盒子，边框，圆角，阴影，形状，渐变，背景图像。。。练习文字与文字样式，行内多样式文字，容器，装饰盒子，边框，圆角，阴影，形状，渐变，背景图像。。。',
-      textAlign: TextAlign.left,
-      style: _textStyle,
-      //限制最大显示行数
-      maxLines: 3,
-      //超过的部分省略号
-      overflow: TextOverflow.ellipsis,
+    return Container(
+      child:Text(
+          '更新时间：$_time\n作者：$_author\n介绍：Flutter考勤项目APP的初步尝试',
+          textAlign: TextAlign.center,
+          style: _textStyle,
+          //限制最大显示行数
+          maxLines: 3,
+          //超过的部分省略号
+          overflow: TextOverflow.ellipsis,
+        ),
+      alignment: Alignment.center,
     );
   }
 }
