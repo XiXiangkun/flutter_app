@@ -8,6 +8,8 @@ import 'demo/basic_demo.dart';
 import 'demo/navigator_demo.dart';
 //form表单提交的部件
 import 'demo/form_demo.dart';
+//成功打卡小部件
+import 'demo/success.dart';
 
 void main(){
   runApp(App());
@@ -28,6 +30,7 @@ class App extends StatelessWidget{
         //之前报错是因为路由没加/
         '/':(context) => NavigatorDemo(),
         '/about':(context) => Page(title: 'About'),
+        '/submit':(context) => successDemo(),
         '/form':(context) => FormDemo(),
       },
       //主题颜色

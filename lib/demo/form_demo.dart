@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'success.dart';
+import 'listview_demo.dart';
+import '../main.dart';
 
 class FormDemo extends StatelessWidget{
   @override
@@ -60,10 +63,14 @@ class LoginDemoState extends State<LoginDemo>{
     debugPrint('id:$id,password:$password');
     Scaffold.of(context).showSnackBar(
       SnackBar(
-        content: Text('打卡验证中...'),
+        content: Text('验证中...'),
         backgroundColor: Colors.teal[300],
+        duration: Duration(seconds: 1),
       ),
     );
+
+    //Navigator.pushNamed(context, '/submit');
+    Navigator.of(context).pushAndRemoveUntil(new MaterialPageRoute(builder: (context) => new Home()), (route) => route==null);
   }
 
   String validateId(value){
@@ -120,10 +127,9 @@ class LoginDemoState extends State<LoginDemo>{
             //提交按钮
             Container(
               width: 150.0,
-              child: RaisedButton(
+              child: FlatButton(
                 color: Theme.of(context).primaryColor,
                 child: Text('login in',style: TextStyle(color: Colors.white, fontSize: 16.0,)),
-                elevation: 0.0,
                 onPressed: submitLoginForm,
               ),
             )
