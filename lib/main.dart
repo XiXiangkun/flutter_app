@@ -10,6 +10,11 @@ import 'demo/navigator_demo.dart';
 import 'demo/form_demo.dart';
 //成功打卡小部件
 import 'demo/success.dart';
+import 'demo/self_info.dart';
+import 'demo/leave_application.dart';
+import 'demo/self_info_edit.dart';
+import 'demo/over_time.dart';
+import 'demo/leave_application_form.dart';
 
 void main(){
   runApp(App());
@@ -32,6 +37,9 @@ class App extends StatelessWidget{
         '/about':(context) => Page(title: 'About'),
         '/submit':(context) => successDemo(),
         '/form':(context) => FormDemo(),
+        '/edit':(context) => infoEditDemo(),
+        '/overTime':(context) => overTimeDemo(),
+        '/leaveApplicationForm':(context) => leaveApplicationFormDemo(),
       },
       //主题颜色
       theme: ThemeData(
@@ -75,28 +83,38 @@ class Home extends StatelessWidget{
           ],
           //顶部阴影颜色
           elevation: 5.0,
-          //设置TabBar部件
-          bottom: TabBar(
-            //未被选择的颜色
-            unselectedLabelColor: Colors.black38,
-            //设置下划线的颜色
-            indicatorColor: Colors.black54,
-            //下划线的大小和label一样
-            indicatorSize: TabBarIndicatorSize.label,
-            indicatorWeight: 1.0,
-            tabs: <Widget>[
-              Tab(icon:Icon(Icons.check_circle_outline),),
-              Tab(icon:Icon(Icons.home),),
-              Tab(icon:Icon(Icons.build),),
-          ]),
         ),
         //body显示对应TabBar
         body:TabBarView(children: <Widget>[
           //Icon(Icons.check_circle_outline,size:128.0,color: Colors.black12,),
+//          Container(
+//            padding: EdgeInsets.all(8.0),
+//            child: Column(
+//              children: <Widget>[
+//                Text('工作班次',style: TextStyle(fontSize: 26.0,color: Colors.teal,decoration: TextDecoration.overline,)),
+//                ListViewDemo(),
+//                //ListViewDemo(),
+//              ],
+//            ),
+//          ),
           ListViewDemo(),
-          BasicDemo(),
+          //BasicDemo(),
+          Container(
+            child: Column(
+              children: <Widget>[
+                leaveApplicationDemo()
+              ],
+            ),
+          ),
           //Icon(Icons.home,size:128.0,color: Colors.black12,),
-          Icon(Icons.build,size:128.0,color: Colors.black12,),
+          Container(
+            child: Column(
+              children: <Widget>[
+                selfInfoDemo(),
+              ],
+            ),
+          )
+          // Icon(Icons.build,size:128.0,color: Colors.black12,),
         ]),
         //设置抽屉，左边栏drawer，右边栏endDrawer，会自动添加icon
         //设置为Container容器,或者直接用Drawer部件
@@ -150,7 +168,24 @@ class Home extends StatelessWidget{
           ),
         ),
         //设置底部导航栏
-        bottomNavigationBar: BottomNavigationBarDemo(),
+        bottomNavigationBar: Container(
+          padding: EdgeInsets.only(top: 9.0,bottom: 4.0,),
+          color: Colors.teal,
+          child: TabBar(
+            //未被选择的颜色
+              unselectedLabelColor: Colors.black38,
+              //设置下划线的颜色
+              indicatorColor: Colors.black54,
+              //下划线的大小和label一样
+              indicatorSize: TabBarIndicatorSize.label,
+              indicatorWeight: 1.0,
+              tabs: <Widget>[
+                Tab(icon:Icon(Icons.calendar_today,size: 28.0,),),
+                Tab(icon:Icon(Icons.add_circle,size: 28.0,),),
+                Tab(icon:Icon(Icons.account_circle,size: 28.0,),),
+              ]),
+        )
+        //BottomNavigationBarDemo(),
       ),
     );
   }

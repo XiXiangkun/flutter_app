@@ -27,4 +27,44 @@ class Post {
       author: 'XXK1',
       imageUrl: 'https://b-ssl.duitang.com/uploads/item/201905/24/20190524000409_pppfl.jpg',
     ),
+    Post(
+      title:'TRY3',
+      author: 'XXK1',
+      imageUrl: 'https://b-ssl.duitang.com/uploads/item/201905/24/20190524000409_pppfl.jpg',
+    ),
+    Post(
+      title:'TRY3',
+      author: 'XXK1',
+      imageUrl: 'https://b-ssl.duitang.com/uploads/item/201905/24/20190524000409_pppfl.jpg',
+    ),
+    Post(
+      title:'TRY3',
+      author: 'XXK1',
+      imageUrl: 'https://b-ssl.duitang.com/uploads/item/201905/24/20190524000409_pppfl.jpg',
+    ),
+    Post(
+      title:'TRY3',
+      author: 'XXK1',
+      imageUrl: 'https://b-ssl.duitang.com/uploads/item/201905/24/20190524000409_pppfl.jpg',
+    ),
+    Post(
+      title:'TRY3',
+      author: 'XXK1',
+      imageUrl: 'https://b-ssl.duitang.com/uploads/item/201905/24/20190524000409_pppfl.jpg',
+    ),Post(
+      title:'TRY3',
+      author: 'XXK1',
+      imageUrl: 'https://b-ssl.duitang.com/uploads/item/201905/24/20190524000409_pppfl.jpg',
+    ),
+    Post(
+      title:'TRY3',
+      author: 'XXK1',
+      imageUrl: 'https://b-ssl.duitang.com/uploads/item/201905/24/20190524000409_pppfl.jpg',
+    ),
+    Post(
+      title:'TRY3',
+      author: 'XXK1',
+      imageUrl: 'https://b-ssl.duitang.com/uploads/item/201905/24/20190524000409_pppfl.jpg',
+    ),
+
   ];

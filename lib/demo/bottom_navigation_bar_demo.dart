@@ -35,12 +35,8 @@ class _BottomNavigationBarDemoState extends State<BottomNavigationBarDemo>{
             title: Text('列表信息'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.explore),
-            title: Text('发现'),
-          ),
-          BottomNavigationBarItem(
             icon: Icon(Icons.history),
-            title: Text('历史信息'),
+            title: Text('申请操作'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
