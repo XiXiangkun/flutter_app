@@ -19,8 +19,11 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 
-一些效果图：
-<img src="https://github.com/XiXiangkun/images/blob/master/flutter_login.png?raw=true" width="700" hegiht="250" align=center />
+## 一些效果图：
+<img src="https://github.com/XiXiangkun/images/blob/master/flutter_login.png?raw=true" width="300" hegiht="500" align=center />
+# 
 <img src="https://github.com/XiXiangkun/images/blob/master/flutter_pass.png?raw=true" width="700" hegiht="250" align=center />
+# 
 <img src="https://github.com/XiXiangkun/images/blob/master/flutter_self.png?raw=true" width="700" hegiht="250" align=center />
+# 
 <img src="https://github.com/XiXiangkun/images/blob/master/flutter_form.png?raw=true" width="700" hegiht="250" align=center />
