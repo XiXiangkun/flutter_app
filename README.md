@@ -1,6 +1,7 @@
 # flutter_app
 
 A new Flutter application.（Android Studio创建）
+With MaterialApp Scaffold AppBar BottomNavigationBar TabBar Drawer
 
 ## Getting Started
 
